@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Coders Los Angeles</title>
+    <meta name="author" content="Bruce Lim">
+    <meta name="description" content="Coders LA aims to provide to all, what they need to know to get started with developing web sites and applications.">
+
+    <meta name="twitter:title" content="Coders LA">
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- third-generation iPad with high-resolution Retina display: -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/favicon144.png">
+
+    <!-- iPhone with high-resolution Retina display: -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/favicon114.png">
+
+    <!-- first- and second-generation iPad: -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/favicon72.png">
+
+    <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+    <link rel="apple-touch-icon-precomposed" href="img/favicon57.png">
+
+    <!-- basic favicon -->
+    <link rel="shortcut icon" href="img/favicon32.png">
+
+    <meta property="og:image" content="img/code.png">
+    <meta property="og:description" content="Coders LA aims to provide to all, what they need to know to get started with developing web sites and applications.">
+    <meta property="og:title" content="Coders Los Angeles">
+
+    <!--
+    <link rel="stylesheet" href="#.css">
+    <script src="#.js"></script>
+    -->
+<style>
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+    color: #323232;
+    background-color: #fff;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+footer.gray {
+    padding: 80px 0;
+    background: #f5f5f5;
+    position: relative;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+footer .f-logo-center {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    margin-left: -3%;
+    padding: 20px;
+    text-align: center;
+    border: 5px solid #f5f5f5;
+    background-color: #fff;
+}
+
+.footer-logo {
+    display: block;
+}
+
+.container-fluid, .col-lg-1, .col-md-1, .col-sm-1, .col-xs-1, .col-lg-2, .col-md-2, .col-sm-2, .col-xs-2, .col-lg-3, .col-md-3, .col-sm-3, .col-xs-3, .col-lg-4, .col-md-4, .col-sm-4, .col-xs-4, .col-lg-5, .col-md-5, .col-sm-5, .col-xs-5, .col-lg-6, .col-md-6, .col-sm-6, .col-xs-6, .col-lg-7, .col-md-7, .col-sm-7, .col-xs-7, .col-lg-8, .col-md-8, .col-sm-8, .col-xs-8, .col-lg-9, .col-md-9, .col-sm-9, .col-xs-9, .col-lg-10, .col-md-10, .col-sm-10, .col-xs-10, .col-lg-11, .col-md-11, .col-sm-11, .col-xs-11, .col-lg-12, .col-md-12, .col-sm-12, .col-xs-12 {
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+footer.gray .copyright {
+    letter-spacing: 2px;
+    color: #000;
+    font-size: 14px;
+}
+
+footer.gray .copyright-sub-title {
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.pull-right {
+    float: right;
+}
+
+footer.gray .social-link.circle a {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid #222;
+    border-radius: 50%;
+    line-height: 40px;
+    display: inline-block;
+    margin: 10px;
+    color: #222;
+    font-size: 20px;
+}
+
+/*footer.gray .social-link a {
+    display: inline-block;
+    margin: 10px;
+    color: #222;
+    font-size: 20px;
+}*/
+
+.lift-off_hide {
+    visibility: hidden;
+    -webkit-transform: translateY(40px);
+    -ms-transform: translateY(40px);
+    transform: translateY(40px);
+    opacity: 0;
+}
+
+.lift-off_show {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.lift-off {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    text-align: center;
+    color: #fff;
+    background: rgba(0, 0, 0, .6);
+    line-height: 40px;
+}
+
+.banner-17 {
+    background-image: url(http://1.bp.blogspot.com/-9IyUo4PfZbc/U2lgMlsBY6I/AAAAAAAAQJo/Upyo1mGPMdk/s1600/laskyline-3-X3.jpg) !important;
+}
+
+.banner-state {
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+.menuzord {
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 0;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    background: none;
+}
+
+@media (min-width: 768px) {
+    header {
+        position: absolute;
+        z-index: 1200;
+        top: 0;
+        width: 100%;
+    }
+
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+
+    .col-md-6 {
+        width: 50%;
+    }
+
+    .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9 {
+        float: left;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }    
+}
+
+
+
+</style>
+<link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="l-header l-header_overlay">
+            <div id="sticky-wrapper" class="l-navbar-wrapper" style="height: 200px;">
+                <div class="l-navbar l-navbar_expand l-navbar_t-light-trans js-navbar-sticky">
+                    <div class="container">
+                        <nav class="menuzord js-primary-navigation menuzord-responsive" role="navigation" aria-label="Primary Navigation">
+                            <a href="index.html" class="logo-brand">
+                                <img class="retina" src="img/favicon32.png" alt="Coders LA">
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="banner-state text-center vertical-align banner-17">
+            <div class="container-mid">
+                <div class="container">
+                    <div class="banner-title">
+                        <h1 class="text-uppercase ls-20">Coders LA</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="gray">
+            <div class="container">
+
+                <div class="f-logo-center">
+                    <a href="index.html" class="footer-logo">
+                        <img class="retina" src="img/favicon32.png" alt="">
+                    </a>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="copyright">
+                        © Coders LA 2017.
+                    </div>
+                    <div class="copyright-sub-title text-uppercase">
+                        Building your skills with lots of fun
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="social-link pull-right circle ">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                        <a href="#"><i class="fa fa-behance"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <a data-scroll="" class="lift-off js-lift-off lift-off_show" href="#"><i class="fa fa-angle-up"></i></a>
+</body>
+</html>
