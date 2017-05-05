@@ -6,6 +6,7 @@
     <meta name="author" content="Bruce Lim">
     <meta name="description" content="Coders LA aims to provide to all, what they need to know to get started with developing web sites and applications.">
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta name="twitter:title" content="Coders LA">
 
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -29,224 +30,39 @@
     <meta property="og:description" content="Coders LA aims to provide to all, what they need to know to get started with developing web sites and applications.">
     <meta property="og:title" content="Coders Los Angeles">
 
-    <!--
-    <link rel="stylesheet" href="#.css">
-    <script src="#.js"></script>
-    -->
-<style>
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
+    <!--common style-->
+    <link href="./portfolio_files/css" rel="stylesheet" type="text/css">
 
-*:after, *:before {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
+    <!-- inject:css -->
+    <link rel="stylesheet" href="./portfolio_files/bootstrap.min.css">
+    <link rel="stylesheet" href="./portfolio_files/animate.css">
+    <link rel="stylesheet" href="./portfolio_files/style.css">
+    <link rel="stylesheet" href="./portfolio_files/default-theme.css">
+    <!-- endinject -->
 
-html {
-    font-size: 10px;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    font-family: sans-serif;
-}
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="vendor/backward/html5shiv.js"></script>
+    <script src="vendor/backward/respond.min.js"></script>
+    <![endif]-->
 
-body {
-    margin: 0;
-    color: #323232;
-    background-color: #fff;
-    font-family: "Source Sans Pro", sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-    -moz-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-}
-
-footer.gray {
-    padding: 80px 0;
-    background: #f5f5f5;
-    position: relative;
-}
-
-.container {
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-footer .f-logo-center {
-    position: absolute;
-    top: -50px;
-    left: 50%;
-    margin-left: -3%;
-    padding: 20px;
-    text-align: center;
-    border: 5px solid #f5f5f5;
-    background-color: #fff;
-}
-
-.footer-logo {
-    display: block;
-}
-
-.container-fluid, .col-lg-1, .col-md-1, .col-sm-1, .col-xs-1, .col-lg-2, .col-md-2, .col-sm-2, .col-xs-2, .col-lg-3, .col-md-3, .col-sm-3, .col-xs-3, .col-lg-4, .col-md-4, .col-sm-4, .col-xs-4, .col-lg-5, .col-md-5, .col-sm-5, .col-xs-5, .col-lg-6, .col-md-6, .col-sm-6, .col-xs-6, .col-lg-7, .col-md-7, .col-sm-7, .col-xs-7, .col-lg-8, .col-md-8, .col-sm-8, .col-xs-8, .col-lg-9, .col-md-9, .col-sm-9, .col-xs-9, .col-lg-10, .col-md-10, .col-sm-10, .col-xs-10, .col-lg-11, .col-md-11, .col-sm-11, .col-xs-11, .col-lg-12, .col-md-12, .col-sm-12, .col-xs-12 {
-    padding-right: 30px;
-    padding-left: 30px;
-}
-
-.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
-    position: relative;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
-}
-
-footer.gray .copyright {
-    letter-spacing: 2px;
-    color: #000;
-    font-size: 14px;
-}
-
-footer.gray .copyright-sub-title {
-    letter-spacing: 2px;
-    font-size: 12px;
-}
-
-.text-uppercase {
-    text-transform: uppercase;
-}
-
-.circle {
-    border-radius: 50%;
-}
-
-.pull-right {
-    float: right;
-}
-
-footer.gray .social-link.circle a {
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    border: 1px solid #222;
-    border-radius: 50%;
-    line-height: 40px;
-    display: inline-block;
-    margin: 10px;
-    color: #222;
-    font-size: 20px;
-}
-
-/*footer.gray .social-link a {
-    display: inline-block;
-    margin: 10px;
-    color: #222;
-    font-size: 20px;
-}*/
-
-.lift-off_hide {
-    visibility: hidden;
-    -webkit-transform: translateY(40px);
-    -ms-transform: translateY(40px);
-    transform: translateY(40px);
-    opacity: 0;
-}
-
-.lift-off_show {
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1;
-}
-
-.lift-off {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    width: 40px;
-    height: 40px;
-    -webkit-transition: all .3s;
-    transition: all .3s;
-    text-align: center;
-    color: #fff;
-    background: rgba(0, 0, 0, .6);
-    line-height: 40px;
-}
-
-.banner-17 {
-    background-image: url(http://1.bp.blogspot.com/-9IyUo4PfZbc/U2lgMlsBY6I/AAAAAAAAQJo/Upyo1mGPMdk/s1600/laskyline-3-X3.jpg) !important;
-}
-
-.banner-state {
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: 50% 50%;
-    background-size: cover;
-}
-
-.menuzord {
-    position: relative;
-    float: left;
-    width: 100%;
-    padding: 0;
-    letter-spacing: .5px;
-    text-transform: uppercase;
-    background: none;
-}
-
-@media (min-width: 768px) {
-    header {
-        position: absolute;
-        z-index: 1200;
-        top: 0;
-        width: 100%;
-    }
-
-    .container {
-        width: 750px;
-    }
-}
-
-@media (min-width: 992px) {
-    .container {
-        width: 970px;
-    }
-
-    .col-md-6 {
-        width: 50%;
-    }
-
-    .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9 {
-        float: left;
-    }
-}
-
-@media (min-width: 1200px) {
-    .container {
-        width: 1170px;
-    }    
-}
-
-
-
-</style>
-<link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
 </head>
 
 <body>
+
     <div class="wrapper">
         <header class="l-header l-header_overlay">
-            <div id="sticky-wrapper" class="l-navbar-wrapper" style="height: 200px;">
-                <div class="l-navbar l-navbar_expand l-navbar_t-light-trans js-navbar-sticky">
+            <div id="sticky-wrapper" class="l-navbar-wrapper" style="height: 100px;">
+                <div class="l-navbar l-navbar_expand l-navbar_t-light-trans js-navbar-sticky" style="width: 1341px; margin: 0 auto;">
                     <div class="container">
                         <nav class="menuzord js-primary-navigation menuzord-responsive" role="navigation" aria-label="Primary Navigation">
-                            <a href="index.html" class="logo-brand">
-                                <img class="retina" src="img/favicon32.png" alt="Coders LA">
+                            <a href="javascript:void(0)" class="showhide">
+                                <em></em><em></em><em></em>
+                            </a>
+
+                            <a href="/" class="logo-brand">
+                                <img class="retina" src="img/favicon32.png" alt="Coders LA"> Coders LA
                             </a>
                         </nav>
                     </div>
@@ -258,18 +74,18 @@ footer.gray .social-link.circle a {
             <div class="container-mid">
                 <div class="container">
                     <div class="banner-title">
-                        <h1 class="text-uppercase ls-20">Coders LA</h1>
+                        <h1 class="text-uppercase ls-20"> Coders LA</h1>
                     </div>
                 </div>
             </div>
         </div>
 
-        <footer class="gray">
+        <footer id="footer" class="gray footer-3">
             <div class="container">
 
                 <div class="f-logo-center">
-                    <a href="index.html" class="footer-logo">
-                        <img class="retina" src="img/favicon32.png" alt="">
+                    <a href="/" class="footer-logo">
+                        <img class="retina" src="img/favicon57.png" alt="Coders LA">
                     </a>
                 </div>
 
@@ -294,6 +110,20 @@ footer.gray .social-link.circle a {
         </footer>
     </div>
 
-    <a data-scroll="" class="lift-off js-lift-off lift-off_show" href="#"><i class="fa fa-angle-up"></i></a>
+    <script src="./portfolio_files/modernizr.js"></script>
+    <script src="./portfolio_files/jquery-1.10.2.min.js"></script>
+    <script src="./portfolio_files/bootstrap.min.js"></script>
+    <script src="./portfolio_files/validator.min.js"></script>
+    <script src="./portfolio_files/jquery.easing.1.3.js"></script>
+    <script src="./portfolio_files/menuzord.js"></script>
+    <script src="./portfolio_files/jquery.nav.js"></script>
+    <script src="./portfolio_files/jquery.sticky.min.js"></script>
+    <script src="./portfolio_files/visible.js"></script>
+    <script src="./portfolio_files/scripts.js"></script>
+
+<a data-scroll="" class="lift-off js-lift-off lift-off_hide" href="#">
+    <i class="fa fa-angle-up"></i>
+</a>
+
 </body>
 </html>
