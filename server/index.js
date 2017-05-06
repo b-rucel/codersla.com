@@ -35,6 +35,11 @@ app.use( session( {
 // Object.keys( routes ).map( function( key ) {
 //     app.use( routes[ key ] );
 // } );
+const email = require( './routes/email' );
+const connect = require( './lib/connect' );
+
+app.use( connect.connect );
+app.use( '/', email );
 app.use( express.static( __dirname + '/../public' ) );
 
 
