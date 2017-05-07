@@ -7,9 +7,7 @@
     $document = $(document);
     $body = $("body");
 
-
     $document.ready(function () {
-
         /*==============================================
          Retina support added
          ===============================================*/
@@ -22,6 +20,47 @@
                 });
             });
         }
+
+        /*==============================================
+         form support
+         ===============================================*/
+        let $name = $( 'input[name="name"]' );
+        let $email = $( 'input[name="email"]' );
+        let interested = $( '.desc > input[type="checkbox"]:checked' ).map(function() {
+                return $( this ).val();
+            })
+            .get()
+            .join( ',' ).split( ',' )
+
+        $( '#submit' ).click( function ( e ) {
+            if ( $name.val().length == 0 ) {
+                alert( 'Name cannot be blank' );
+                return;
+            }
+
+            if ( $email.val().length == 0 ) {
+                alert( 'Email cannot be blank' );
+                return;
+            }
+
+            $.ajax( {
+                type: 'POST',
+                url: '/email',
+                data: {
+                    name: $name.val(),
+                    email: $email.val(),
+                    interested: interested
+                },
+                error: function ( x, s, e ) {
+console.log(x);
+console.log(s);
+console.log(e);
+                },
+                success: function ( res ) {
+                    console.log( res );
+                }
+            } );
+        } )
 
 
         /*==============================================
@@ -104,7 +143,6 @@
                 $(this).trigger("resizeEnd");
             }, 300);
         }).trigger("resize");
-
 
 
         /*==============================================
