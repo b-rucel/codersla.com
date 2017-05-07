@@ -24,15 +24,19 @@
         /*==============================================
          form support
          ===============================================*/
-        let $name = $( 'input[name="name"]' );
-        let $email = $( 'input[name="email"]' );
-        let interested = $( '.desc > input[type="checkbox"]:checked' ).map(function() {
-                return $( this ).val();
-            })
-            .get()
-            .join( ',' ).split( ',' )
-
         $( '#submit' ).click( function ( e ) {
+            let $name = $( 'input[name="name"]' );
+            let $email = $( 'input[name="email"]' );
+            let interested = $( '.desc > input[type="checkbox"]:checked' ).map(function() {
+                    return $( this ).val();
+                })
+                .get()
+                .join( ',' ).split( ',' );
+            
+            let $submit = $( this );
+            $submit.fadeOut( '500' );
+            $( 'h4.error' ).remove();
+
             if ( $name.val().length == 0 ) {
                 alert( 'Name cannot be blank' );
                 return;
@@ -52,12 +56,21 @@
                     interested: interested
                 },
                 error: function ( x, s, e ) {
-console.log(x);
-console.log(s);
-console.log(e);
+                    console.log(x);
+                    console.log(s);
+                    console.log(e);
+
+                    $submit.fadeIn( '500' );
                 },
                 success: function ( res ) {
-                    console.log( res );
+                    if ( res.error ) {
+                        console.log( $( this ) );
+                        $submit.fadeIn( '500' );
+                        $submit.parent().append( `<h4 class="error">${ res.error }</h4>` );
+                        return;
+                    }
+
+                    $submit.parent().append( '<h4>Email Submitted</h4>' );
                 }
             } );
         } )

@@ -74,7 +74,7 @@ router.post( '/email', ( request, response ) => {
                 .then( result => {
                     if ( result.length > 0 ) {
                         next( {
-                            error: `This email exists already: ${ 'me@brucelim.com' }`
+                            error: `This email exists already: ${ request.body.email }`
                         } );
                         return;
                     }
